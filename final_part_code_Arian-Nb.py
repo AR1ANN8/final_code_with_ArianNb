@@ -5,8 +5,8 @@ from pandas import DataFrame
 window = Tk()
 window.geometry("400x400")
 window.title("ArianNb")
-def my_function():
-    with open('sample_html.html', 'r') as f:
+def my_function(file_name: str):
+    with open(f'{file_name}.html', 'r') as f:
         html_page = f.read()
     content = BeautifulSoup(html_page, 'html.parser', encoding = 'utf-8') #utf-8 between cotations for persian language
     # print(content)
